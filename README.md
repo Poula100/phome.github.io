@@ -1,31 +1,136 @@
-<!-- INTRO SECTION -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Wishing Well</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(180deg, #1a202c, #2d3748);
+    color: #edf2f7;
+    min-height: 100vh;
+    padding: 40px 20px;
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 2rem;
+    letter-spacing: 0.05em;
+  }
+
+  p {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 20px;
+    color: #cbd5f5;
+    font-size: 1rem;
+  }
+
+  section {
+    max-width: 600px;
+    margin: 60px auto;
+    background: rgba(26, 32, 44, 0.85);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.6);
+    backdrop-filter: blur(6px);
+  }
+
+  a, button {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 12px 0;
+    margin-top: 20px;
+    border-radius: 999px;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    cursor: pointer;
+    background: linear-gradient(135deg, #63b3ed, #9f7aea);
+    color: #1a202c;
+    text-decoration: none;
+    box-shadow: 0 8px 18px rgba(99, 179, 237, 0.5);
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+  }
+
+  a:hover, button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 22px rgba(99, 179, 237, 0.7);
+  }
+
+  a:active, button:active {
+    transform: translateY(1px);
+    box-shadow: 0 4px 10px rgba(99, 179, 237, 0.5);
+  }
+
+  textarea {
+    width: 100%;
+    min-height: 100px;
+    border-radius: 10px;
+    border: 1px solid #4a5568;
+    padding: 12px;
+    font-size: 1rem;
+    background: #2d3748;
+    color: #edf2f7;
+    resize: vertical;
+    outline: none;
+  }
+
+  textarea:focus {
+    border-color: #63b3ed;
+    box-shadow: 0 0 0 1px #63b3ed;
+  }
+
+  .note {
+    font-size: 0.85rem;
+    color: #9ae6b4;
+    margin-top: 10px;
+  }
+
+  .message {
+    margin-top: 15px;
+    text-align: center;
+    color: #9ae6b4;
+    font-size: 0.95rem;
+  }
+</style>
+</head>
+<body>
+
+<!-- INTRO -->
 <section id="intro">
   <h2>Welcome to the Wishing Well</h2>
   <p>This is the wishing well where you can toss a symbolic coin and wish for your greatest desires.</p>
-  <a href="#payment" class="wish-button">Wish Now</a>
+  <a href="#payment">Wish Now</a>
 </section>
 
-<!-- PAYMENT SECTION -->
+<!-- PAYMENT -->
 <section id="payment">
   <h2>Optional Offering</h2>
   <p>You may toss a symbolic $1 coin into the well. This is optional — the magic listens either way.</p>
 
-  <div class="payment-options">
-    <button class="pay-button">Pay $1</button>
-    <p class="note">This is symbolic and not enforced.</p>
-  </div>
+  <button>Pay $1</button>
+  <p class="note">This offering is symbolic and not enforced.</p>
 
-  <a href="#wish" class="skip-button">Skip Payment</a>
+  <a href="#wish">Skip Payment</a>
 </section>
 
-<!-- WISH SECTION -->
+<!-- WISH -->
 <section id="wish">
   <h2>Make a Wish</h2>
   <p>Write your wish below and let it sink into the enchanted water.</p>
 
   <textarea placeholder="I wish that..."></textarea>
 
-  <button class="wish-button">Toss the Coin</button>
+  <button>Toss the Coin</button>
 
   <p class="message">Your wish drifts softly into the well.</p>
 </section>
+
+</body>
+</html>
