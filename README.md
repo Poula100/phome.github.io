@@ -5,7 +5,6 @@
 <title>Wishing Well</title>
 
 <style>
-  /* Magical background */
   body {
     margin: 0;
     font-family: "Segoe UI", sans-serif;
@@ -16,7 +15,6 @@
     overflow-x: hidden;
   }
 
-  /* Soft stars */
   body::before {
     content: "";
     position: fixed;
@@ -27,7 +25,6 @@
     pointer-events: none;
   }
 
-  /* Header */
   .header {
     text-align: center;
     margin-bottom: 40px;
@@ -42,8 +39,9 @@
     text-shadow: 0 0 20px #63b3ed55;
   }
 
-  /* Section container */
-  section {
+  /* Page container */
+  .page {
+    display: none;
     max-width: 600px;
     margin: 50px auto;
     background: rgba(26, 32, 44, 0.85);
@@ -52,6 +50,16 @@
     box-shadow: 0 12px 40px rgba(0,0,0,0.6);
     backdrop-filter: blur(6px);
     animation: fadeIn 0.8s ease;
+  }
+
+  /* Show page when targeted */
+  .page:target {
+    display: block;
+  }
+
+  /* Default page (intro) */
+  #intro {
+    display: block;
   }
 
   @keyframes fadeIn {
@@ -74,7 +82,6 @@
     font-size: 1rem;
   }
 
-  /* Buttons */
   a, button {
     display: block;
     width: 100%;
@@ -105,7 +112,6 @@
     box-shadow: 0 4px 10px rgba(99, 179, 237, 0.5);
   }
 
-  /* Textarea */
   textarea {
     width: 100%;
     min-height: 120px;
@@ -146,15 +152,15 @@
   <h1>WISH</h1>
 </div>
 
-<!-- INTRO -->
-<section id="intro">
+<!-- PAGE 1 -->
+<section id="intro" class="page">
   <h2>Welcome to the Wishing Well</h2>
   <p>This is the wishing well where you can toss a symbolic coin and wish for your greatest desires.</p>
-  <a href="#payment">Wish Now</a>
+  <a href="#offering">Wish Now</a>
 </section>
 
-<!-- PAYMENT -->
-<section id="payment">
+<!-- PAGE 2 -->
+<section id="offering" class="page">
   <h2>Optional Offering</h2>
   <p>You may toss a symbolic $1 coin into the well. This is optional — the magic listens either way.</p>
 
@@ -164,8 +170,8 @@
   <a href="#wish">Skip Payment</a>
 </section>
 
-<!-- WISH -->
-<section id="wish">
+<!-- PAGE 3 -->
+<section id="wish" class="page">
   <h2>Make a Wish</h2>
   <p>Write your wish below and let it sink into the enchanted water.</p>
 
